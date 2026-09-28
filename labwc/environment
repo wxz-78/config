@@ -1,0 +1,44 @@
+# ~/.config/labwc/environment
+# Variables KEY=VALUE, una por l铆nea. labwc las carga antes de iniciar
+# el compositor y las exporta al resto de la sesi贸n.
+
+# --- Entorno Base Wayland / labwc ---
+XDG_CURRENT_DESKTOP=labwc
+XDG_SESSION_TYPE=wayland
+XDG_SESSION_DESKTOP=labwc
+
+# --- Navegadores y Apps Web (Firefox, Electron) ---
+MOZ_ENABLE_WAYLAND=1
+# MOZ_ENABLE_WAYLAND_DMABUF=1 # (Ya no es estrictamente necesario en versiones recientes de Firefox)
+ELECTRON_OZONE_PLATFORM_HINT=wayland
+
+# --- Toolkits (GTK, Qt, Clutter) ---
+GDK_BACKEND=wayland,x11
+QT_QPA_PLATFORM=wayland;xcb
+QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+CLUTTER_BACKEND=wayland
+
+# --- SDL / Java ---
+SDL_VIDEODRIVER=wayland,x11
+_JAVA_AWT_WM_NONREPARENTING=1
+
+# --- Gr谩ficos Intel y Aceleraci贸n de Video ---
+LIBVA_DRIVER_NAME=iHD
+VDPAU_DRIVER=va_gl
+MESA_LOADER_DRIVER_OVERRIDE=iris
+
+# Vulkan: Usualmente autodetectado por el loader de Mesa. 
+# Descomentar solo si hay conflictos con la detecci贸n por defecto.
+# VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json
+
+# --- Apariencia ---
+XCURSOR_SIZE=24
+XCURSOR_THEME=Bibata-Modern-Classic
+
+# --- Gesti贸n de Sesi贸n ---
+LIBSEAT_BACKEND=seatd
+
+# --- Teclado para Wayland ---
+XKB_DEFAULT_LAYOUT=latam
+XKB_DEFAULT_VARIANT=deadtilde
+# XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle

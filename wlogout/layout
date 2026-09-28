@@ -1,0 +1,30 @@
+{
+    "label" : "lock",
+    "action" : "swaylock -f -c 000000",
+    "text" : "󰌾 \nBloquear",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action" : "pkill -TERM -u $USER labwc",
+    "text" : "󰍃 \nSalir",
+    "keybind" : "e"
+}
+{
+    "label" : "suspend",
+    "action" : "loginctl suspend",
+    "text" : "󰒲 \nSuspender",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action" : "loginctl reboot",
+    "text" : "󰜉 \nReiniciar",
+    "keybind" : "r"
+}
+{
+    "label" : "shutdown",
+    "action" : "loginctl poweroff",
+    "text" : "󰐥 \nApagar",
+    "keybind" : "s"
+}

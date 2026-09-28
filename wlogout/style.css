@@ -1,0 +1,57 @@
+/* ============================================================
+   INK · wlogout
+   Fondo casi negro, botones como sellos de tinta.
+   ============================================================ */
+
+* {
+    font-family: "DejaVuSansM Nerd Font", "DejaVu Sans Mono", monospace;
+    background-image: none;
+    box-shadow: none;
+    transition: 180ms ease;
+}
+
+window {
+    background-color: rgba(4, 4, 4, 0.92);
+}
+
+button {
+    color: #d8d8d8;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    margin: 22px;
+    font-size: 15px;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    background-size: 26%;
+}
+
+button:focus,
+button:active,
+button:hover {
+    color: #0a0a0a;
+    background-color: #f2f2f2;
+    border: 1px solid #ffffff;
+    outline-style: none;
+}
+
+#lock {
+    background-position: center 32%;
+}
+
+#logout {
+    background-position: center 32%;
+}
+
+#suspend {
+    background-position: center 32%;
+}
+
+#reboot {
+    background-position: center 32%;
+}
+
+#shutdown {
+    background-position: center 32%;
+}

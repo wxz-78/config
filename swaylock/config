@@ -1,0 +1,59 @@
+# ============================================================
+# INK · swaylock
+# Fondo casi negro, círculo de entrada como sello de tinta.
+# ============================================================
+
+daemonize
+
+ignore-empty-password
+show-failed-attempts
+
+indicator
+indicator-radius=110
+indicator-thickness=10
+
+# colores base
+color=0a0a0a
+font=DejaVuSansM Nerd Font
+
+# estado por defecto (círculo en reposo)
+inside-color=0a0a0aCC
+ring-color=ffffff33
+line-color=00000000
+text-color=e8e8e8
+separator-color=00000000
+
+# escribiendo
+key-hl-color=ffffff
+bs-hl-color=ffffff
+inside-key-color=1a1a1aCC
+ring-key-color=ffffffB0
+text-key-color=ffffff
+
+# verificando
+inside-ver-color=1a1a1aCC
+ring-ver-color=ffffff80
+text-ver-color=ffffff
+
+# error
+inside-wrong-color=0a0a0aCC
+ring-wrong-color=ffffff
+text-wrong-color=ffffff
+line-wrong-color=00000000
+
+# caps lock
+inside-caps-lock-color=1a1a1aCC
+ring-caps-lock-color=ffffff66
+text-caps-lock-color=e8e8e8
+
+text-caps-lock-show=layout
+
+layout-bg-color=0a0a0aCC
+layout-border-color=ffffff26
+layout-text-color=e8e8e8
+
+fade-in=0.25
+disable-caps-lock-text=false
+grace=1
+grace-no-mouse
+grace-no-touch

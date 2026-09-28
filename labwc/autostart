@@ -1,0 +1,62 @@
+#!/bin/sh
+# ~/.config/labwc/autostart
+# Se ejecuta al iniciar la sesión de labwc.
+# labwc lo lanza con `sh`, así que evita construcciones bash-only aquí.
+
+# --- Entorno D-Bus (Crucial en sistemas sin systemd) ---
+# Necesario para que los portales XDG reconozcan la sesión de Wayland
+dbus-update-activation-environment --all &
+
+# --- Limpieza de procesos (Previene duplicados al recargar labwc) ---
+killall -q waybar mako swaybg swayidle udiskie blueman-applet kanshi lxqt-policykit-agent
+
+# --- Portales XDG ---
+# Es recomendable matar instancias previas. En sistemas sin systemd, 
+# iniciarlos con un ligero retraso previene condiciones de carrera.
+killall -q xdg-desktop-portal-wlr xdg-desktop-portal-gtk xdg-desktop-portal
+( sleep 1 && /usr/lib/xdg-desktop-portal-wlr ) &
+( sleep 2 && /usr/lib/xdg-desktop-portal-gtk ) &
+( sleep 3 && /usr/lib/xdg-desktop-portal ) &
+
+# --- Servicios Core y Autenticación ---
+lxqt-policykit-agent &
+
+# Gestor de perfiles de pantalla (monitores)
+kanshi &
+
+# Brillo de pantalla(brightnessctl)
+brightnessctl set 10%
+
+# --- Interfaz, Tema y Fondo ---
+# Fondo de pantalla
+swaybg -i ~/Pinturas/2.png -m fill &
+
+# Barra de estado
+waybar &
+
+# Notificaciones
+mako &
+
+# Tema de aplicaciones GTK/Qt
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus' 2>/dev/null &
+# gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' 2>/dev/null &
+
+# --- Utilidades y Demonios ---
+# Historial de portapapeles
+killall -q wl-paste
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+
+# Bloqueo automático por inactividad
+swayidle -w \
+    timeout 300 swaylock \
+    before-sleep swaylock &
+
+# Gestor de dispositivos extraíbles (USB, discos)
+udiskie --tray --appindicator &
+
+# Bluetooth (applet de bandeja)
+blueman-applet &
+
+# Directorios estándar de usuario (-/Descargas, -/Documentos, etc.)
+xdg-user-dirs-update &

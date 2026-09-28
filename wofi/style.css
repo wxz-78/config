@@ -1,0 +1,75 @@
+/* ============================================================
+   INK · wofi
+   Panel como una hoja de papel con un trazo de pincel arriba.
+   ============================================================ */
+
+* {
+    font-family: "DejaVuSansM Nerd Font", "DejaVu Sans Mono", monospace;
+    font-size: 14px;
+}
+
+window {
+    background: rgba(6, 6, 6, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+#input {
+    margin: 14px 14px 8px 14px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    color: #f2f2f2;
+    caret-color: #ffffff;
+}
+
+#input image {
+    color: #888888;
+}
+
+#inner-box {
+    margin: 0 10px 10px 10px;
+    background: transparent;
+}
+
+#outer-box {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+#scroll {
+    margin: 0 4px;
+}
+
+#text {
+    color: #d8d8d8;
+    padding: 2px 6px;
+}
+
+#entry {
+    padding: 8px 10px;
+    margin: 2px 4px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+#entry:selected {
+    background: rgba(255, 255, 255, 0.10);
+    outline: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#entry image {
+    -gtk-icon-effect: dim;
+}
+
+#entry:selected image {
+    -gtk-icon-effect: none;
+}

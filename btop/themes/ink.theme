@@ -1,0 +1,63 @@
+# ============================================================
+# INK · btop theme
+# Escala de grises con los mismos acentos apagados que foot.
+# ============================================================
+
+# General
+theme[main_bg]="#0a0a0a"
+theme[main_fg]="#eaeaea"
+theme[title]="#f5f5f5"
+theme[hi_fg]="#ffffff"
+theme[selected_bg]="#eaeaea"
+theme[selected_fg]="#0a0a0a"
+theme[inactive_fg]="#4a4a4a"
+theme[graph_text]="#cfcfcf"
+theme[proc_misc]="#cfcfcf"
+
+# Bordes / divisores de cajas
+theme[cpu_box]="#3a3a3a"
+theme[mem_box]="#3a3a3a"
+theme[net_box]="#3a3a3a"
+theme[proc_box]="#3a3a3a"
+theme[div_line]="#3a3a3a"
+
+# Temperatura (verde apagado -> ocre -> rojo apagado)
+theme[temp_start]="#6f7d63"
+theme[temp_mid]="#a08a5a"
+theme[temp_end]="#8a5a5a"
+
+# CPU (azul apagado -> mauve -> rojo apagado)
+theme[cpu_start]="#6b7a8f"
+theme[cpu_mid]="#8a748f"
+theme[cpu_end]="#8a5a5a"
+
+# Memoria libre / cache / disponible / usada
+theme[free_start]="#1c1c1c"
+theme[free_mid]="#93a384"
+theme[free_end]="#f5f5f5"
+
+theme[cached_start]="#1c1c1c"
+theme[cached_mid]="#8ea0b8"
+theme[cached_end]="#cfcfcf"
+
+theme[available_start]="#1c1c1c"
+theme[available_mid]="#c7ac78"
+theme[available_end]="#f5f5f5"
+
+theme[used_start]="#1c1c1c"
+theme[used_mid]="#8a748f"
+theme[used_end]="#f5f5f5"
+
+# Red (descarga / subida)
+theme[download_start]="#1c1c1c"
+theme[download_mid]="#6b7a8f"
+theme[download_end]="#8ea0b8"
+
+theme[upload_start]="#1c1c1c"
+theme[upload_mid]="#6f7d63"
+theme[upload_end]="#93a384"
+
+# Procesos
+theme[process_start]="#cfcfcf"
+theme[process_mid]="#8a748f"
+theme[process_end]="#8a5a5a"

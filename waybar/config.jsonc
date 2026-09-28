@@ -1,0 +1,79 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "margin": 0,
+    "spacing": 0,
+
+    "modules-left": ["custom/logo", "wlr/taskbar"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "battery", "custom/user", "custom/power"],
+
+    "custom/logo": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wofi --show drun"
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon} {name}",
+        "icon-size": 16,
+        "icon-theme": "Papirus",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "all-outputs": true,
+        "markup": true
+    },
+
+    "clock": {
+        "format": "{:%H:%M}  ·  {:%a %d %b}",
+        "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "network": {
+        "format-wifi": "直",
+        "format-ethernet": "睊",
+        "format-disconnected": "睊",
+        "tooltip-format-wifi": "{essid}  ·  {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname}  ·  {ipaddr}",
+        "tooltip-format-disconnected": "sin conexión",
+        "on-click": "cmst"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "婢",
+        "format-icons": {
+            "default": ["奄", "奔", "墳"]
+        },
+        "tooltip-format": "{volume}%",
+        "on-click": "pavucontrol",
+        "scroll-step": 5
+    },
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{time} restante",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+
+    "custom/user": {
+        "format": "",
+        "tooltip-format": "{}",
+        "exec": "whoami",
+        "interval": 3600,
+        "on-click": "swaylock"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}

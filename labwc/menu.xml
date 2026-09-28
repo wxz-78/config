@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+  <menu id="root-menu" label="Menú principal">
+
+    <!-- Acciones rápidas -->
+    <item label="Terminal (foot)">
+      <action name="Execute"><command>foot</command></action>
+    </item>
+    <item label="Lanzador de apps (wofi)">
+      <action name="Execute"><command>wofi --show drun</command></action>
+    </item>
+
+    <separator/>
+
+    <!-- Navegación -->
+    <menu id="internet-menu" label="Internet">
+      <item label="LibreWolf">
+        <action name="Execute"><command>librewolf</command></action>
+      </item>
+    </menu>
+
+    <!-- Gestión de archivos -->
+    <menu id="files-menu" label="Archivos">
+      <item label="Explorador de archivos (yazi)">
+        <action name="Execute"><command>foot -e yazi</command></action>
+      </item>
+      <item label="Gestor de archivos comprimidos (file-roller)">
+        <action name="Execute"><command>file-roller</command></action>
+      </item>
+    </menu>
+
+    <!-- Desarrollo y Edición -->
+    <menu id="editors-menu" label="Desarrollo y Edición">
+      <item label="Neovim">
+        <action name="Execute"><command>foot -e nvim</command></action>
+      </item>
+      <item label="Nano">
+        <action name="Execute"><command>foot -e nano</command></action>
+      </item>
+    </menu>
+
+    <!-- Multimedia y Captura -->
+    <menu id="graphics-menu" label="Multimedia">
+      <item label="Visor de imágenes (imv)">
+        <action name="Execute"><command>imv</command></action>
+      </item>
+      <item label="Lector de PDF (zathura)">
+        <action name="Execute"><command>zathura</command></action>
+      </item>
+      <separator/>
+      <item label="Captura de pantalla (área)">
+        <action name="Execute"><command>grim -g "$(slurp)" ~/Imágenes/captura-$(date +%Y%m%d-%H%M%S).png</command></action>
+      </item>
+      <item label="Grabar pantalla (wf-recorder)">
+        <action name="Execute"><command>foot -e wf-recorder -g "$(slurp)" -f ~/Vídeos/grabacion-$(date +%Y%m%d-%H%M%S).mp4</command></action>
+      </item>
+    </menu>
+
+    <!-- Herramientas del Sistema -->
+    <menu id="system-menu" label="Sistema">
+      <item label="Información del sistema (fastfetch)">
+        <action name="Execute"><command>foot --hold -e fastfetch</command></action>
+      </item>
+      <item label="Monitor de recursos (btop)">
+        <action name="Execute"><command>foot -e btop</command></action>
+      </item>
+      <item label="Control de volumen (pavucontrol)">
+        <action name="Execute"><command>pavucontrol</command></action>
+      </item>
+      <item label="Bluetooth (blueman)">
+        <action name="Execute"><command>blueman-manager</command></action>
+      </item>
+      <item label="Apariencia GTK (nwg-look)">
+        <action name="Execute"><command>nwg-look</command></action>
+      </item>
+      <item label="Ahorro de energía (powertop)">
+        <action name="Execute"><command>foot -e sudo powertop</command></action>
+      </item>
+    </menu>
+
+    <separator/>
+
+    <!-- Controles de sesión -->
+    <item label="Bloquear pantalla">
+      <action name="Execute"><command>swaylock</command></action>
+    </item>
+    <item label="Menú de salida (wlogout)">
+      <action name="Execute"><command>wlogout</command></action>
+    </item>
+
+    <separator/>
+
+    <!-- Controles del compositor -->
+    <item label="Reconfigurar labwc">
+      <action name="Reconfigure"/>
+    </item>
+    <item label="Salir de labwc">
+      <action name="Exit"/>
+    </item>
+
+  </menu>
+</openbox_menu>

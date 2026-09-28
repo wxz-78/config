@@ -1,0 +1,88 @@
+# ============================================================
+# Tema "Ink" para labwc (formato openbox-3)
+# Ventanas como "papel" claro flotando sobre un fondo negro tinta.
+# Ver labwc-theme(5) para la referencia completa de claves.
+# ============================================================
+
+# -------- general --------
+border.width: 1
+window.titlebar.padding.width: 10
+window.titlebar.padding.height: 6
+
+# -------- bordes de ventana --------
+# Un trazo fino de tinta delimitando el "papel"
+window.active.border.color: #1a1a1a
+window.inactive.border.color: #3a3a3a
+
+# -------- fondo de la barra de título (el "papel") --------
+window.*.title.bg: Solid
+window.active.title.bg.color: #f2f0ec
+window.inactive.title.bg.color: #d9d6d1
+
+# -------- texto del título --------
+window.active.label.text.color: #111111
+window.inactive.label.text.color: #55534f
+window.label.text.justify: Left
+
+# -------- botones (min / max / close) --------
+# Por defecto son xbm de 1 bit: cambian de color automáticamente
+# con el tema, sin necesitar iconos png/svg propios.
+window.button.width: 28
+window.button.height: 28
+window.button.spacing: 4
+
+window.button.hover.bg.color: #00000018
+window.button.hover.bg.corner-radius: 14
+
+window.active.button.unpressed.image.color: #1a1a1a
+window.inactive.button.unpressed.image.color: #8a8884
+
+# -------- sombra de ventana (profundidad del "papel") --------
+window.active.shadow.size: 40
+window.inactive.shadow.size: 24
+window.active.shadow.color: #00000070
+window.inactive.shadow.color: #00000040
+
+# -------- ToggleKeybinds --------
+window.active.indicator.toggled-keybind.color: #c0392b
+
+# -------- menú (root-menu / client-menu): tarjeta oscura de tinta --------
+menu.border.width: 1
+menu.border.color: #ffffff26
+menu.width.min: 180
+menu.width.max: 320
+
+menu.items.padding.x: 12
+menu.items.padding.y: 7
+menu.items.bg.color: #141414
+menu.items.text.color: #e8e8e8
+menu.items.active.bg.color: #ffffff
+menu.items.active.text.color: #0a0a0a
+
+menu.separator.width: 1
+menu.separator.color: #ffffff26
+menu.separator.padding.width: 8
+menu.separator.padding.height: 4
+
+menu.title.bg.color: #1a1a1a
+menu.title.text.color: #ffffff
+menu.title.text.justify: Center
+
+# -------- OSD (workspace switcher, window switcher) --------
+osd.bg.color: #101010e6
+osd.border.color: #ffffff33
+osd.border.width: 1
+osd.label.text.color: #f0f0f0
+
+osd.window-switcher.style-classic.item.active.bg.color: #ffffff26
+osd.window-switcher.style-classic.item.active.border.color: #ffffff80
+
+osd.workspace-switcher.boxes.width: 18
+osd.workspace-switcher.boxes.height: 18
+osd.workspace-switcher.boxes.border.width: 2
+
+# -------- overlays de snapping --------
+snapping.overlay.edge.bg.color: #ffffff30
+snapping.overlay.region.bg.color: #ffffff30
+snapping.overlay.edge.border.color: #ffffffaa
+snapping.overlay.region.border.color: #ffffffaa
